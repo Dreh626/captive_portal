@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login Captive Portal</title>
+	<link rel='stylesheet prefetch' href='./captiveportal-bootstrap.min.css'>
+	<link rel="stylesheet" href="./captiveportal-font-awesome.min.css">
+	<link rel="stylesheet" href="./captiveportal-style.min.css">
+	<script type="text/javascript">
+		function ExibeLoader(){
+			document.getElementById('loader').style.display = "block";
+		}
+	</script>
+</head>
+<body>
+    <div class="row">
+		<form class="form-signin" method="post" action="$PORTAL_ACTION$">
+			<div  style="padding: 30px 0px 0px 0px;" >
+				<center><img width="250" height="112" src="./captiveportal-logo-fatec.svg"/></center>
+			</div>			
+			<h2 style="text-align:center; font-weight:bold">Acesso via Wi-Fi</h2>
+			<!--
+			<h4 style="text-align:center;  font-weight:bold; padding: 0px 20px 0px 20px;">
+				Para maior segurança, recomendamos a instalação de nosso certificado! 
+				<a href="./captiveportal-certificado-wifi.crt">Clique aqui para download.</a>
+			</h4>
+			-->
+			<h2 style="text-align:center; font-weight:bold; color:red;">Credenciais Inv&aacute;lidas!</h2>
+			<div class="container-fluid">
+				<h5 style="padding: 0px 0px 0px 20px; font-weight:bold">Por favor, informe suas credenciais:</h5>
+				<div style="margin-bottom: 10px; padding: 0px 20px 0px 20px" class="input-group">
+					<span class="input-group-addon"><i class="fa fa-user"></i></span>
+					<input type="text" class="form-control" name="auth_user" id="auth_user" placeholder="Usu&aacute;rio"/>
+				</div>
+				<div style="margin-bottom: 25px; padding: 0px 20px 0px 20px" class="input-group">
+					<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+					<input type="password" class="form-control" name="auth_pass" id="auth_pass" placeholder="Senha" />
+				</div>
+
+				<h5 style="padding: 0px 0px 0px 20px; font-weight:bold">Ou, insira um Voucher v&aacute;lido:</h5>
+				<div style="margin-bottom: 10px; padding: 0px 20px 0px 20px" class="input-group">
+					<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+					<input type="text" class="form-control" name="auth_voucher" id="auth_voucher" placeholder="Voucher" />
+				</div>
+				
+				<input name="redirurl" type="hidden" value="$PORTAL_REDIRURL$">
+				<input name="zone" type="hidden" value="$PORTAL_ZONE$">
+				
+				<div style="margin-bottom: 20px; padding: 20px 20px 0px 20px">
+					<button class="btn btn-lg btn-primary btn-block" name="accept" type="submit" onClick="ExibeLoader()" value="Continuar">Continuar</button>
+				</div>
+				
+				<div id="loader" align="center" style="display:none; padding: 0px 0px 20px 0px"><img width="100px" height="20px" src="./captiveportal-loader.gif"></div>
+				
+				<div style="text-align:center;  font-weight:bold;">
+					Coordena&ccedil;&atilde;o dos Laborat&oacute;rios de Inform&aacute;tica <br>
+					<script type="text/javascript">
+						var date = new Date();
+						document.write(date.getFullYear());
+					</script>, Fatec Taquaritinga
+				</div>
+				<br>
+			</div>
+		</form>
+  		
+  	</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+body{
+	border:  0px solid black;
+	background: url("captiveportal-fundo-wifi.svg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.row {
+  margin: 0px 0px 0px 0px;
+  margin-top: 80px;
+  margin-bottom: 65px;
+}
+
+.form-signin {
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 30px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: ;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+  border:  1px solid #B22D30;
+}
